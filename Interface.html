@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>BINGO</title>
+</head>
+<body>
+    <div id="titulo">
+        <h1>Bingo</h1>
+    </div>
+    <div id="configuracao">
+        <h3>Selecione a quantidade de números:</h3>
+        <select name="qtd_numeros">
+            <option value="set_cin">75</option>
+            <option value="oit">80</option>
+            <option value="nov">90</option>
+        </select><br><br>
+        <input type="button" value="Sortear">
+    </div><br>
+    <h3>Último número: <span id="ult_num"></span></h3><br><br>
+    <h3>Números sorteados:</h3>
+    <div id="caixa_texto">
+        <textarea name="num_sorteados" cols="20" rows="5" readonly></textarea>
+    </div><br>
+</body>
+<footer class="marca">André Gonçalves (2024)</footer>
+</html>
