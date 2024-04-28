@@ -17,7 +17,7 @@ body {
     text-align: center;
   } 
   
-  #configuracao, #caixa_texto, footer {
+  #configuracao, #caixa_texto {
     margin: 5px;
     text-align: center;
   }
@@ -37,6 +37,7 @@ body {
   }
   
   footer {
+    margin: 5px;
     position: fixed;
     bottom: 0;
     left: 0;
