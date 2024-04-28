@@ -1,5 +1,7 @@
 .marca{
     font-style: italic;
+    background-color: black;
+    color: white;
 }
 
 body {
@@ -10,19 +12,37 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: rgba(229, 229, 229, 0.8);
+  }
+
+  #botaoSortear {
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+  }
+
+  #ultNum {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20pt;
   }
   
   #titulo {
-    margin: 10px;
+    margin: 5px;
     text-align: center;
+    font-weight: bold;
   } 
   
   #configuracao, #caixa_texto {
-    margin: 5px;
+    margin: 0;
     text-align: center;
   }
   
   #caixa_texto {
+    font-size: 15pt;
+    color: black;
+    font-style: italic;
     width: 30%;
   }
   

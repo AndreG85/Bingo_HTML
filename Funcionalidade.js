@@ -57,7 +57,12 @@ function atualizarNumerosSorteados() {
     }
 }
 
-// Adiciona um ouvinte de eventos de carregamento da página para reativar a caixa de seleção de quantidade de números
+// Caixa de diálogo ao apertar F5
+window.onbeforeunload = function() {
+    return 'Tem certeza que deseja atualizar a página e reiniciar seu sorteio?';
+  };
+
+// Ao carregar a página reativar a caixa de seleção de quantidade de números
 window.addEventListener('load', function() {
     qtdNumerosSelect.disabled = false;
 });
