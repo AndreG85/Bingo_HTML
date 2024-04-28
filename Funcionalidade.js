@@ -2,10 +2,7 @@
 const qtdNumerosSelect = document.getElementById('qtdNumeros');
 const botaoSortear = document.getElementById('botaoSortear');
 const ultimoNumeroSpan = document.getElementById('ult_num');
-const numerosSorteadosTextarea = document.getElementById('numSorteados');
-
-// Adiciona logs de depuração para verificar se os elementos estão sendo selecionados corretamente
-console.log('Elementos HTML:', qtdNumerosSelect, botaoSortear, ultimoNumeroSpan, numerosSorteadosTextarea);
+const numerosSorteadosOl = document.getElementById('numerosSorteadosOl');
 
 // Array para armazenar os números sorteados
 const numerosSorteados = [];
@@ -33,16 +30,34 @@ botaoSortear.addEventListener('click', function() {
 
     // Atualiza a lista de números sorteados na caixa de texto
     atualizarNumerosSorteados();
+
+    // Desativa a caixa de seleção de quantidade de números
+    qtdNumerosSelect.disabled = true;
 });
 
 // Função para sortear um número aleatório dentro do intervalo especificado
 function sortearNumero(max) {
-    return Math.floor(Math.random() * max) + 1;
+    const numeroSorteado = Math.floor(Math.random() * max) + 1;
+    if (!numerosSorteados.includes(numeroSorteado)) {
+      return numeroSorteado;
+    } else {
+      console.log('Número já sorteado. Tente novamente.');
+      return sortearNumero(max);
+    }
 }
 
 // Função para atualizar a lista de números sorteados na caixa de texto
 function atualizarNumerosSorteados() {
-    if (numerosSorteadosTextarea) {
-        numerosSorteadosTextarea.value = numerosSorteados.join(', ');
+    if (numerosSorteadosOl) {
+      numerosSorteadosOl.innerHTML = '';
+      const numerosSorteadosString = numerosSorteados.sort((a, b) => a - b).join(', ');
+      const span = document.createElement('span');
+      span.textContent = numerosSorteadosString;
+      numerosSorteadosOl.appendChild(span);
     }
 }
+
+// Adiciona um ouvinte de eventos de carregamento da página para reativar a caixa de seleção de quantidade de números
+window.addEventListener('load', function() {
+    qtdNumerosSelect.disabled = false;
+});
