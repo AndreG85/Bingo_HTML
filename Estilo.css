@@ -1,83 +1,81 @@
-.marca{
+.marca {
   font-style: italic;
-  background-color: black;
+  background-color: rgb(11, 11, 198);
   color: white;
+  font-size: 8pt;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: rgba(229, 229, 229, 0.8);
+  min-height: 100vh;
+  background-color: rgb(186, 204, 218);
   font-family: verdana;
 }
 
+.configuracao {
+  text-align: center;
+  font-family: verdana;
+  font-size: 10pt;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 #qtdNumeros {
-  font-size: 12pt;
+  font-size: 10pt;
 }
 
 #botaoSortear {
   border-radius: 6px;
-  width: 90px;
-  height: 40px;
+  width: 70px;
+  height: 30px;
   font-family: verdana;
-  font-size: 12pt;
+  font-size: 10pt;
   box-shadow: black;
 }
 
-#ultNum {
+.ult_numero {
   text-align: center;
   color: red;
   font-weight: bold;
-  font-size: 20pt;
-  margin-bottom: -20px;
-  margin-top: -20px;
+  font-size: 15pt;
+  margin-bottom: 0;
+  margin-top: 0;
 }
-  
+
 #titulo {
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
-  background-color: black;
+  background-color: rgb(11, 11, 198);;
   color: white;
   width: 100%;
   padding: 5px 0;
   font-family: Verdana;
-  margin-bottom: -40px;
-} 
-  
-#configuracao {
-  text-align: center;
-  font-family: verdana;
-  font-size: 10pt;
-  margin: auto;
 }
-  
+
 #caixa_texto {
   text-align: center;
-  font-size: 13pt;
+  font-size: 12pt;
   color: black;
   font-style: italic;
   width: 400px;
-  height: 200px;
+  height: 180px;
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
   font-family: verdana;
-  margin-top: -70px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 #caixa_texto ol {
   margin-left: -30px;
 }
-  
+
 textarea {
   width: 100%;
   height: 100%;
@@ -88,15 +86,12 @@ textarea {
   font-style: italic;
   font-family: verdana;
 }
-  
+
 footer {
   margin: 5px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 10px;
   background-color: #f0f0f0;
   border-top: 1px solid #ccc;
   text-align: center;
+  width: 100%;
 }
