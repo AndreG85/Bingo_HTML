@@ -1,21 +1,19 @@
-// Obtém referências para os elementos HTML relevantes
 const qtdNumerosSelect = document.getElementById('qtdNumeros');
 const botaoSortear = document.getElementById('botaoSortear');
 const ultimoNumeroSpan = document.getElementById('ult_num');
 const numerosSorteadosOl = document.getElementById('numerosSorteadosOl');
 
-// Array para armazenar os números sorteados
 const numerosSorteados = [];
 
-// Adiciona um ouvinte de eventos de clique ao botão de sorteio
+// Função do botão sortear
 botaoSortear.addEventListener('click', function() {
     console.log('Botão "Sortear" clicado!');
 
-    // Obtém a quantidade de números selecionada pelo usuário
+    // Obter a quantidade de números selecionada
     const qtdNumeros = parseInt(qtdNumerosSelect.value);
     console.log('Quantidade de números selecionada:', qtdNumeros);
 
-    // Realiza o sorteio de um número aleatório
+    // Sorteio aleatório
     const numeroSorteado = sortearNumero(qtdNumeros);
     console.log('Número sorteado:', numeroSorteado);
 
@@ -28,14 +26,14 @@ botaoSortear.addEventListener('click', function() {
     numerosSorteados.push(numeroSorteado);
     console.log('Números sorteados:', numerosSorteados);
 
-    // Atualiza a lista de números sorteados na caixa de texto
+    // Chama a função para atualizar lista de números sorteados
     atualizarNumerosSorteados();
 
     // Desativa a caixa de seleção de quantidade de números
     qtdNumerosSelect.disabled = true;
 });
 
-// Função para sortear um número aleatório dentro do intervalo especificado
+// Função para sortear um número aleatório dentro do intervalo selecionado
 function sortearNumero(max) {
     const numeroSorteado = Math.floor(Math.random() * max) + 1;
     if (!numerosSorteados.includes(numeroSorteado)) {

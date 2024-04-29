@@ -1,69 +1,102 @@
 .marca{
-    font-style: italic;
-    background-color: black;
-    color: white;
+  font-style: italic;
+  background-color: black;
+  color: white;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: rgba(229, 229, 229, 0.8);
-  }
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(229, 229, 229, 0.8);
+  font-family: verdana;
+}
 
-  #botaoSortear {
-    border-radius: 5px;
-    width: 80px;
-    height: 30px;
-  }
+#qtdNumeros {
+  font-size: 12pt;
+}
 
-  #ultNum {
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    font-size: 20pt;
-  }
+#botaoSortear {
+  border-radius: 6px;
+  width: 90px;
+  height: 40px;
+  font-family: verdana;
+  font-size: 12pt;
+  box-shadow: black;
+}
+
+#ultNum {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 20pt;
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
   
-  #titulo {
-    margin: 5px;
-    text-align: center;
-    font-weight: bold;
-  } 
+#titulo {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+  font-family: Verdana;
+  margin-bottom: -40px;
+} 
   
-  #configuracao, #caixa_texto {
-    margin: 0;
-    text-align: center;
-  }
+#configuracao {
+  text-align: center;
+  font-family: verdana;
+  font-size: 10pt;
+  margin: auto;
+}
   
-  #caixa_texto {
-    font-size: 15pt;
-    color: black;
-    font-style: italic;
-    width: 30%;
-  }
+#caixa_texto {
+  text-align: center;
+  font-size: 13pt;
+  color: black;
+  font-style: italic;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: verdana;
+  margin-top: -70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+#caixa_texto ol {
+  margin-left: -30px;
+}
   
-  textarea {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    font-style: italic;
-  }
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-style: italic;
+  font-family: verdana;
+}
   
-  footer {
-    margin: 5px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-top: 1px solid #ccc;
-    text-align: center;
-  }
+footer {
+  margin: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
